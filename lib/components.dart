@@ -27,9 +27,10 @@ class _TabsWebState extends State<TabsWeb> {
       },
       child: AnimatedDefaultTextStyle(
         duration: Duration(microseconds: 100),
+        curve: Curves.elasticIn,
         style: isSelected
             ? GoogleFonts.oswald(
-                fontSize: 50.0,
+                fontSize: 30.0,
                 color: Colors.redAccent,
                 decoration: TextDecoration.underline)
             : GoogleFonts.oswald(fontSize: 25.0, color: Colors.black),
