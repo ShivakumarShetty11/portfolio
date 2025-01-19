@@ -21,21 +21,23 @@ class LandingPageWebState extends State<LandingPageWeb> {
         iconTheme: IconThemeData(size: 25.0, color: Colors.black),
         title: TabsWeb("HOME"),
       ),
-      body: Container(
-          child: Row(children: [
-        CircleAvatar(
-            radius: 146.0,
-            backgroundColor: Colors.tealAccent,
-            child: CircleAvatar(
-              radius: 143.0,
-              backgroundColor: Colors.black,
+      body: ListView(children: [
+        Container(
+            child: Row(children: [
+          CircleAvatar(
+              radius: 146.0,
+              backgroundColor: Colors.tealAccent,
               child: CircleAvatar(
-                radius: 140.0,
-                backgroundColor: Colors.white,
-                backgroundImage: AssetImage("assets/image1circle.png"),
-              ),
-            ))
-      ])),
+                radius: 143.0,
+                backgroundColor: Colors.black,
+                child: CircleAvatar(
+                  radius: 140.0,
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage("assets/image1circle.png"),
+                ),
+              ))
+        ])),
+      ]),
     );
   }
 }
