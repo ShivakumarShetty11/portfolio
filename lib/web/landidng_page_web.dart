@@ -58,15 +58,8 @@ class LandingPageWebState extends State<LandingPageWeb> {
                         bottomRight: Radius.circular(20.0),
                       ),
                     ),
-                    child: Text(
-                      "Hello, I'm here!",
-                      style: GoogleFonts.oswald(
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
+                    child: SansBold("hi", 15),
+                    alignment: Alignment.center,
                   ),
                 ),
               ],

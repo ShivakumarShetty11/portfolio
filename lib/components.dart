@@ -42,3 +42,19 @@ class _TabsWebState extends State<TabsWeb> {
     );
   }
 }
+
+class SansBold extends StatelessWidget {
+  final text;
+  final size;
+  const SansBold(this.text, this.size, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text,
+        style: GoogleFonts.oswald(
+          fontSize: size,
+          fontWeight: FontWeight.w600,
+          color: Colors.black,
+        ));
+  }
+}
