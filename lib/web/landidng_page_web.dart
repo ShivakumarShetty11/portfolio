@@ -25,6 +25,7 @@ class LandingPageWebState extends State<LandingPageWeb> {
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
+          //first page
           Container(
             padding: EdgeInsets.symmetric(vertical: 20.0),
             child: Row(
@@ -79,13 +80,37 @@ class LandingPageWebState extends State<LandingPageWeb> {
                           SizedBox(height: 10.0),
                           Sans("shiva@gmail.com", 15)
                         ],
+                      ),
+                      SizedBox(height: 10.0),
+                      Row(
+                        children: [
+                          Icon(Icons.call),
+                          SizedBox(height: 10.0),
+                          Sans("123456", 15)
+                        ],
+                      ),
+                      SizedBox(height: 10.0),
+                      Row(
+                        children: [
+                          Icon(Icons.location_pin),
+                          SizedBox(height: 10.0),
+                          Sans("bengaluru", 15)
+                        ],
                       )
                     ],
                   ),
                 ),
               ],
             ),
+          ),
+          Container(
+            height: 20,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+            ),
           )
+          //second page
         ],
       ),
     );
