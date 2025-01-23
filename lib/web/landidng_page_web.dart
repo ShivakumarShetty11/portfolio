@@ -61,6 +61,7 @@ class LandingPageWebState extends State<LandingPageWeb> {
                     child: SansBold("hi", 15),
                     alignment: Alignment.center,
                   ),
+                  child: SansBold("Shiva", 55.0),
                 ),
               ],
             ),
