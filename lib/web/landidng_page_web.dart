@@ -103,11 +103,12 @@ class LandingPageWebState extends State<LandingPageWeb> {
               ],
             ),
           ),
+          //second page
           Container(
-            height: 20,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
+              children: [Sans("About me", 25)],
             ),
           )
           //second page
