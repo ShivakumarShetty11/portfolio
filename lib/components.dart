@@ -69,8 +69,8 @@ class Sans extends StatelessWidget {
     return Text(text,
         style: GoogleFonts.oswald(
           fontSize: size,
-          fontWeight: FontWeight.w600,
-          color: Colors.black,
+          fontWeight: FontWeight.w500,
+          color: Colors.grey,
         ));
   }
 }

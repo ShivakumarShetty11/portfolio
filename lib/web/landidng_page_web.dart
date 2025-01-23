@@ -44,28 +44,48 @@ class LandingPageWebState extends State<LandingPageWeb> {
                     ),
                   ),
                 ),
-
                 SizedBox(width: 20.0), // Space between image and text
 
                 // Text Section
                 Expanded(
-                  child: Container(
-                    padding: EdgeInsets.all(16.0),
-                    decoration: BoxDecoration(
-                      color: Colors.tealAccent,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20.0),
-                        bottomRight: Radius.circular(20.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(16.0),
+                        decoration: BoxDecoration(
+                          color: Colors.tealAccent,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20.0),
+                            bottomRight: Radius.circular(20.0),
+                          ),
+                        ),
+                        child: SansBold("hi", 15),
+                        alignment: Alignment.center,
                       ),
-                    ),
-                    child: SansBold("hi", 15),
-                    alignment: Alignment.center,
+                      SizedBox(
+                          height:
+                              10.0), // Space between "hi" container and "Shiva" text
+                      SansBold(
+                        "Shiva Kumar",
+                        55.0,
+                      ),
+                      Sans("Student", 30),
+                      SizedBox(height: 10.0),
+                      Row(
+                        children: [
+                          Icon(Icons.email),
+                          SizedBox(height: 10.0),
+                          Sans("shiva@gmail.com", 15)
+                        ],
+                      )
+                    ],
                   ),
-                  child: SansBold("Shiva", 55.0),
                 ),
               ],
             ),
-          ),
+          )
         ],
       ),
     );
