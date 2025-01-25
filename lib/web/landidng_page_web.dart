@@ -117,7 +117,27 @@ class LandingPageWebState extends State<LandingPageWeb> {
                 Sans("i am actively looking for Internship opportunity", 15),
                 Sans("u can acontact me through any of the above medium", 15),
                 SizedBox(height: 15),
-                Row(children: [Sans("flutter", 15)])
+                Row(children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            style: BorderStyle.solid,
+                            color: Colors.tealAccent,
+                            width: 2),
+                        borderRadius: BorderRadius.circular(7.0)),
+                    child: Sans("flutter", 15),
+                  ),
+                  SizedBox(width: 7),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            style: BorderStyle.solid,
+                            color: Colors.tealAccent,
+                            width: 2),
+                        borderRadius: BorderRadius.circular(7.0)),
+                    child: Sans("firebase", 15),
+                  )
+                ])
               ],
             ),
           )
