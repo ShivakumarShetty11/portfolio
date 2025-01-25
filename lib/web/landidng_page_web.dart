@@ -14,6 +14,7 @@ class LandingPageWeb extends StatefulWidget {
 class LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       drawer: Drawer(),
       backgroundColor: Colors.white,
@@ -105,39 +106,82 @@ class LandingPageWebState extends State<LandingPageWeb> {
           ),
           //second page
           Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Sans("About me", 40),
-                SizedBox(height: 15),
-                Sans(
-                    "Hello,i am shivakumar and i am pursuing my bachelors of Engineering in RVCE banglore",
-                    15),
-                Sans("i am actively looking for Internship opportunity", 15),
-                Sans("u can acontact me through any of the above medium", 15),
-                SizedBox(height: 15),
-                Row(children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            style: BorderStyle.solid,
-                            color: Colors.tealAccent,
-                            width: 2),
-                        borderRadius: BorderRadius.circular(7.0)),
-                    child: Sans("flutter", 15),
-                  ),
-                  SizedBox(width: 7),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            style: BorderStyle.solid,
-                            color: Colors.tealAccent,
-                            width: 2),
-                        borderRadius: BorderRadius.circular(7.0)),
-                    child: Sans("firebase", 15),
-                  )
-                ])
+                Image.asset(
+                  "assets\web.jpg",
+                  height: deviceHeight / 1.6,
+                ),
+                SizedBox(width: 150.0),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Sans("About me", 40),
+                    SizedBox(height: 15),
+                    Sans(
+                        "Hello,i am shivakumar and i am pursuing my bachelors of Engineering in RVCE banglore",
+                        15),
+                    Sans(
+                        "i am actively looking for Internship opportunity", 15),
+                    Sans("u can acontact me through any of the above medium",
+                        15),
+                    SizedBox(height: 15),
+                    Row(children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                style: BorderStyle.solid,
+                                color: Colors.tealAccent,
+                                width: 2),
+                            borderRadius: BorderRadius.circular(7.0)),
+                        child: Sans("flutter", 15),
+                      ),
+                      SizedBox(width: 7),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                style: BorderStyle.solid,
+                                color: Colors.tealAccent,
+                                width: 2),
+                            borderRadius: BorderRadius.circular(7.0)),
+                        child: Sans("firebase", 15),
+                      ),
+                      SizedBox(width: 7),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                style: BorderStyle.solid,
+                                color: Colors.tealAccent,
+                                width: 2),
+                            borderRadius: BorderRadius.circular(7.0)),
+                        child: Sans("Android", 15),
+                      ),
+                      SizedBox(width: 7),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                style: BorderStyle.solid,
+                                color: Colors.tealAccent,
+                                width: 2),
+                            borderRadius: BorderRadius.circular(7.0)),
+                        child: Sans("ios", 15),
+                      ),
+                      SizedBox(width: 7),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                style: BorderStyle.solid,
+                                color: Colors.tealAccent,
+                                width: 2),
+                            borderRadius: BorderRadius.circular(7.0)),
+                        child: Sans("Windows", 15),
+                      )
+                    ])
+                  ],
+                ),
               ],
             ),
           )
