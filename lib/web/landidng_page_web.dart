@@ -108,7 +108,17 @@ class LandingPageWebState extends State<LandingPageWeb> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Sans("About me", 25)],
+              children: [
+                Sans("About me", 40),
+                SizedBox(height: 15),
+                Sans(
+                    "Hello,i am shivakumar and i am pursuing my bachelors of Engineering in RVCE banglore",
+                    15),
+                Sans("i am actively looking for Internship opportunity", 15),
+                Sans("u can acontact me through any of the above medium", 15),
+                SizedBox(height: 15),
+                Row(children: [Sans("flutter", 15)])
+              ],
             ),
           )
           //second page
