@@ -111,8 +111,8 @@ class LandingPageWebState extends State<LandingPageWeb> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  "assets\web.jpg",
-                  height: deviceHeight / 1.6,
+                  "assets/web.jpg",
+                  height: deviceHeight / 3.6,
                 ),
                 SizedBox(width: 150.0),
                 Column(
