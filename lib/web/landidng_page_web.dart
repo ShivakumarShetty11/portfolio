@@ -184,8 +184,30 @@ class LandingPageWebState extends State<LandingPageWeb> {
                 ),
               ],
             ),
-          )
-          //second page
+          ),
+          Container(
+            height: deviceHeight / 1.6,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SansBold("What i DO", 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Card(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset("assets/webL.png",
+                              height: 200, width: 200)
+                        ],
+                      ),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
