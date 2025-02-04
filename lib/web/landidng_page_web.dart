@@ -195,11 +195,17 @@ class LandingPageWebState extends State<LandingPageWeb> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Card(
+                      elevation: 30,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0)),
+                      shadowColor: Colors.tealAccent,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset("assets/webL.png",
-                              height: 200, width: 200)
+                              height: 200, width: 200),
+                          SizedBox(height: 10),
+                          SansBold("Web Dev", 40)
                         ],
                       ),
                     )
