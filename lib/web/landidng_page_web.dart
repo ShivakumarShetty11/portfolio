@@ -1,40 +1,92 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 
+/// The main widget for displaying the landing page on web devices.
 class LandingPageWeb extends StatefulWidget {
-  const LandingPageWeb({super.key});
+  const LandingPageWeb({Key? key}) : super(key: key);
 
   @override
-  State<LandingPageWeb> createState() => LandingPageWebState();
+  _LandingPageWebState createState() => _LandingPageWebState();
 }
 
-class LandingPageWebState extends State<LandingPageWeb> {
+class _LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
+    // Get the height and width of the device
+    var heightDevice = MediaQuery.of(context).size.height;
+    var widthDevice = MediaQuery.of(context).size.width;
+
     return Scaffold(
-      drawer: Drawer(),
+      // Drawer for navigation
+      drawer: const DrawersWeb(),
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.greenAccent,
-        iconTheme: IconThemeData(size: 25.0, color: Colors.black),
-        title: TabsWeb("HOME"),
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        iconTheme: const IconThemeData(
+          size: 25.0,
+          color: Colors.black,
+        ),
+        title: const TabsWebList(),
       ),
       body: ListView(
-        padding: EdgeInsets.all(16.0),
         children: [
-          //first page
+          // First section: Introduction
           Container(
-            padding: EdgeInsets.symmetric(vertical: 20.0),
+            height: heightDevice - 56,
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                // Image Section
-                CircleAvatar(
-                  radius: 146.0,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.tealAccent,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          topRight: Radius.circular(20.0),
+                          bottomRight: Radius.circular(20.0),
+                        ),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 10.0,
+                        horizontal: 20.0,
+                      ),
+                      child: const SansBold("Hello I'm", 15.0),
+                    ),
+                    const SizedBox(height: 15.0),
+                    const SansBold("Paulina Knop", 55.0),
+                    const Sans("Flutter developer", 30.0),
+                    const SizedBox(height: 15.0),
+                    Row(
+                      children: const [
+                        Icon(Icons.email),
+                        SizedBox(width: 20.0),
+                        Sans("paulinaknop@gmail.com", 15.0),
+                      ],
+                    ),
+                    const SizedBox(height: 10.0),
+                    Row(
+                      children: const [
+                        Icon(Icons.call),
+                        SizedBox(width: 20.0),
+                        Sans("+48 942 564 985", 15.0),
+                      ],
+                    ),
+                    const SizedBox(height: 10.0),
+                    Row(
+                      children: const [
+                        Icon(Icons.location_pin),
+                        SizedBox(width: 20.0),
+                        Sans("13/3, Szczecin, Poland", 15.0),
+                      ],
+                    ),
+                  ],
+                ),
+                const CircleAvatar(
+                  radius: 147.0,
                   backgroundColor: Colors.tealAccent,
                   child: CircleAvatar(
                     radius: 143.0,
@@ -42,197 +94,88 @@ class LandingPageWebState extends State<LandingPageWeb> {
                     child: CircleAvatar(
                       radius: 140.0,
                       backgroundColor: Colors.white,
-                      backgroundImage: AssetImage("assets/image1circle.png"),
+                      backgroundImage: AssetImage("assets/image-circle.png"),
                     ),
-                  ),
-                ),
-                SizedBox(width: 20.0), // Space between image and text
-
-                // Text Section
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(16.0),
-                        decoration: BoxDecoration(
-                          color: Colors.tealAccent,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(20.0),
-                            bottomRight: Radius.circular(20.0),
-                          ),
-                        ),
-                        child: SansBold("hi", 15),
-                        alignment: Alignment.center,
-                      ),
-                      SizedBox(
-                          height:
-                              10.0), // Space between "hi" container and "Shiva" text
-                      SansBold(
-                        "Shiva Kumar",
-                        55.0,
-                      ),
-                      Sans("Student", 30),
-                      SizedBox(height: 10.0),
-                      Row(
-                        children: [
-                          Icon(Icons.email),
-                          SizedBox(height: 10.0),
-                          Sans("shiva@gmail.com", 15)
-                        ],
-                      ),
-                      SizedBox(height: 10.0),
-                      Row(
-                        children: [
-                          Icon(Icons.call),
-                          SizedBox(height: 10.0),
-                          Sans("123456", 15)
-                        ],
-                      ),
-                      SizedBox(height: 10.0),
-                      Row(
-                        children: [
-                          Icon(Icons.location_pin),
-                          SizedBox(height: 10.0),
-                          Sans("bengaluru", 15)
-                        ],
-                      )
-                    ],
                   ),
                 ),
               ],
             ),
           ),
-          //second page
+          // Second section: About me
           Container(
+            height: heightDevice / 1.5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  "assets/web.jpg",
-                  height: deviceHeight / 3.6,
-                ),
-                SizedBox(width: 150.0),
+                Image.asset("assets/web.jpg", height: widthDevice / 1.9),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Sans("About me", 40),
-                    SizedBox(height: 15),
-                    Sans(
-                        "Hello,i am shivakumar and i am pursuing my bachelors of Engineering in RVCE banglore",
-                        15),
-                    Sans(
-                        "i am actively looking for Internship opportunity", 15),
-                    Sans("u can acontact me through any of the above medium",
-                        15),
-                    SizedBox(height: 15),
-                    Row(children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                style: BorderStyle.solid,
-                                color: Colors.tealAccent,
-                                width: 2),
-                            borderRadius: BorderRadius.circular(7.0)),
-                        child: Sans("flutter", 15),
-                      ),
-                      SizedBox(width: 7),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                style: BorderStyle.solid,
-                                color: Colors.tealAccent,
-                                width: 2),
-                            borderRadius: BorderRadius.circular(7.0)),
-                        child: Sans("firebase", 15),
-                      ),
-                      SizedBox(width: 7),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                style: BorderStyle.solid,
-                                color: Colors.tealAccent,
-                                width: 2),
-                            borderRadius: BorderRadius.circular(7.0)),
-                        child: Sans("Android", 15),
-                      ),
-                      SizedBox(width: 7),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                style: BorderStyle.solid,
-                                color: Colors.tealAccent,
-                                width: 2),
-                            borderRadius: BorderRadius.circular(7.0)),
-                        child: Sans("ios", 15),
-                      ),
-                      SizedBox(width: 7),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                style: BorderStyle.solid,
-                                color: Colors.tealAccent,
-                                width: 2),
-                            borderRadius: BorderRadius.circular(7.0)),
-                        child: Sans("Windows", 15),
-                      )
-                    ])
+                    const SansBold("About me", 40.0),
+                    const SizedBox(height: 15.0),
+                    const Sans(
+                      "Hello! I'm Paulina Knop. I specialize in flutter development.",
+                      15.0,
+                    ),
+                    const Sans(
+                      "I strive to ensure astounding performance with state of the art security for Android, iOS, Web, Mac, Linux, and Windows.",
+                      15.0,
+                    ),
+                    const SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        tealContainer("Flutter"),
+                        const SizedBox(width: 7.0),
+                        tealContainer("Firebase"),
+                        const SizedBox(width: 7.0),
+                        tealContainer("Android"),
+                        const SizedBox(width: 7.0),
+                        tealContainer("iOS"),
+                        const SizedBox(width: 7.0),
+                        tealContainer("Windows"),
+                      ],
+                    ),
                   ],
                 ),
               ],
             ),
           ),
-          //container
+          // Third section: What I do
           Container(
-            height: deviceHeight / 1.6,
+            height: heightDevice / 1.3,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SansBold("What i DO", 40),
+                const SansBold("What I do?", 40.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Card(
-                      elevation: 30,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0)),
-                      shadowColor: Colors.tealAccent,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset("assets/webL.png",
-                              height: 200, width: 200),
-                          SizedBox(height: 10),
-                          SansBold("Web Dev", 40)
-                        ],
-                      ),
-                    )
+                  children: const [
+                    AnimatedCard(
+                      imagePath: "assets/webL.png",
+                      text: "Web development",
+                    ),
+                    AnimatedCard(
+                      imagePath: "assets/app.png",
+                      text: "App development",
+                      fit: BoxFit.contain,
+                      reverse: true,
+                    ),
+                    AnimatedCard(
+                      imagePath: "assets/firebase.png",
+                      text: "Back-end development",
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
+          // Fourth section: Contact form
+          const SizedBox(height: 15.0),
+          const ContactFormWeb(),
+          const SizedBox(height: 20.0),
         ],
-      ),
-    );
-  }
-}
-
-class TabsWeb extends StatelessWidget {
-  final String title;
-  TabsWeb(this.title);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: TextStyle(
-        fontSize: 20.0,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
       ),
     );
   }
