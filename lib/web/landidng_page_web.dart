@@ -72,7 +72,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       children: const [
                         Icon(Icons.call),
                         SizedBox(width: 20.0),
-                        Sans("+48 942 564 985", 15.0),
+                        Sans("+91 9740867236", 15.0),
                       ],
                     ),
                     const SizedBox(height: 10.0),

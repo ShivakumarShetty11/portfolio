@@ -156,21 +156,21 @@ class DrawersWeb extends StatelessWidget {
             child: CircleAvatar(
               radius: 70.0,
               backgroundColor: Colors.white,
-              backgroundImage: AssetImage("assets/image.png"),
+              backgroundImage: AssetImage("assets/image2circle.png"),
             ),
           ),
           const SizedBox(height: 15.0),
-          const SansBold("Paulina Knop", 30.0),
+          const SansBold("Shiva Kumar", 30.0),
           const SizedBox(height: 15.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               urlLauncher("assets/instagram.svg",
-                  "https://www.instagram.com/tomcruise/"),
+                  "https://www.instagram.com/Shettyshiva11"),
               urlLauncher(
                   "assets/twitter.svg", "https://www.twitter.com/tomcruise"),
-              urlLauncher("assets/github.svg",
-                  "https://github.com/sagnik150699/paulina_knop"),
+              urlLauncher(
+                  "assets/github.svg", "https://github.com/ShivakumarShetty11"),
             ],
           ),
         ],
@@ -197,7 +197,7 @@ class DrawersMobile extends StatelessWidget {
                 border: Border.all(width: 2.0, color: Colors.black),
               ),
               child: Image.asset(
-                'assets/image1-circle.png',
+                'assets/image1circle.png',
                 filterQuality: FilterQuality.high,
               ),
             ),
