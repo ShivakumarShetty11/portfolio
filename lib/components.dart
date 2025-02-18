@@ -197,7 +197,7 @@ class DrawersMobile extends StatelessWidget {
                 border: Border.all(width: 2.0, color: Colors.black),
               ),
               child: Image.asset(
-                'assets/profile2-circle.png',
+                'assets/image1-circle.png',
                 filterQuality: FilterQuality.high,
               ),
             ),

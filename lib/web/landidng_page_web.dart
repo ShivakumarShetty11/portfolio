@@ -57,14 +57,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       child: const SansBold("Hello I'm", 15.0),
                     ),
                     const SizedBox(height: 15.0),
-                    const SansBold("Paulina Knop", 55.0),
+                    const SansBold("Shiva Kumar", 55.0),
                     const Sans("Flutter developer", 30.0),
                     const SizedBox(height: 15.0),
                     Row(
                       children: const [
                         Icon(Icons.email),
                         SizedBox(width: 20.0),
-                        Sans("paulinaknop@gmail.com", 15.0),
+                        Sans("shivakumar.vahani@gmail.com", 15.0),
                       ],
                     ),
                     const SizedBox(height: 10.0),
@@ -80,7 +80,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       children: const [
                         Icon(Icons.location_pin),
                         SizedBox(width: 20.0),
-                        Sans("13/3, Szczecin, Poland", 15.0),
+                        Sans("RVCE Bengaluru", 15.0),
                       ],
                     ),
                   ],
@@ -94,7 +94,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     child: CircleAvatar(
                       radius: 140.0,
                       backgroundColor: Colors.white,
-                      backgroundImage: AssetImage("assets/image-circle.png"),
+                      backgroundImage: AssetImage("assets/image1circle.png"),
                     ),
                   ),
                 ),
@@ -116,11 +116,11 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     const SansBold("About me", 40.0),
                     const SizedBox(height: 15.0),
                     const Sans(
-                      "Hello! I'm Paulina Knop. I specialize in flutter development.",
+                      "Hello! I'm Shiva Kumar. I specialize in flutter development.",
                       15.0,
                     ),
                     const Sans(
-                      "I strive to ensure astounding performance with state of the art security for Android, iOS, Web, Mac, Linux, and Windows.",
+                      "I strive to ensure i can apply my AI skills fthrough better UI?UX",
                       15.0,
                     ),
                     const SizedBox(height: 10.0),
