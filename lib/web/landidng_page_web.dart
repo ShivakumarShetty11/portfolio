@@ -120,7 +120,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       15.0,
                     ),
                     const Sans(
-                      "I strive to ensure i can apply my AI skills fthrough better UI?UX",
+                      "I strive to ensure i can apply my AI skills through better UI?UX",
                       15.0,
                     ),
                     const SizedBox(height: 10.0),
