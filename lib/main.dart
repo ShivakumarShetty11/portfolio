@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/mobile/landidng_page_mobile.dart';
-import 'package:portfolio/web/landidng_page_web.dart';
+import 'package:portfolio/web/landing_page_web.dart';
 
 void main() {
   runApp(const MyApp());
