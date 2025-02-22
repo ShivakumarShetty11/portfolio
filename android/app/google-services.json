@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "363540717974",
+    "project_id": "portfolio-cd807",
+    "storage_bucket": "portfolio-cd807.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363540717974:android:d5d9f68389e5218944bdb7",
+        "android_client_info": {
+          "package_name": "shivakumar.com.portfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3lAfHb-dLTyUklClCDSFAl3vuHuY_AxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
