@@ -15,6 +15,7 @@ final TextEditingController _emailController = TextEditingController();
 final TextEditingController _phoneController = TextEditingController();
 final TextEditingController _messageController = TextEditingController();
 
+// A StatefulWidget for creating navigation tabs on the web
 class TabsWeb extends StatefulWidget {
   final String title; // Title of the tab
   final String route; // Route to navigate to when the tab is clicked
@@ -35,7 +36,7 @@ class _TabsWebState extends State<TabsWeb> {
     return GestureDetector(
       onTap: () {
         // Navigate to the specified route when the tab is clicked
-        Navigator.of(context).pushReplacementNamed(widget.route);
+        Navigator.of(context).pushNamed(widget.route);
       },
       child: MouseRegion(
         onEnter: (_) {
@@ -82,15 +83,15 @@ class TabsWebList extends StatelessWidget {
     return Row(
       children: const [
         Spacer(flex: 3),
-        TabsWeb(title: "Home", route: "/"),
+        TabsWeb(title: "Home", route: '/'),
         Spacer(),
-        TabsWeb(title: "Works", route: "/works"),
+        TabsWeb(title: "Works", route: '/works'),
         Spacer(),
-        TabsWeb(title: "Blog", route: "/blog"),
+        TabsWeb(title: "Blog", route: '/blog'),
         Spacer(),
-        TabsWeb(title: "About", route: "/about"),
+        TabsWeb(title: "About", route: '/about'),
         Spacer(),
-        TabsWeb(title: 'Contact', route: "/contact"),
+        TabsWeb(title: 'Contact', route: '/contact'),
         Spacer(),
       ],
     );

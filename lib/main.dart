@@ -1,31 +1,31 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/mobile/landidng_page_mobile.dart';
-import 'package:portfolio/web/landing_page_web.dart';
+import 'package:portfolio/routes.dart';
+import 'package:url_strategy/url_strategy.dart';
+import 'firebase_options.dart';
 
-void main() {
+/// The main entry point of the application.
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  setPathUrlStrategy();
+
+  // Initialize Firebase with the default platform options
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+/// The root widget of the application.
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LayoutBuilder(
-        builder: (context, constraint) {
-          if (constraint.maxWidth > 800) {
-            return LandingPageWeb();
-          } else {
-            return LandidngPageMobile();
-          }
-        },
-      ),
+      debugShowCheckedModeBanner: false,
+      // Generate routes for navigation
+      onGenerateRoute: Routes.generateRoute,
+      initialRoute: '/',
     );
   }
 }

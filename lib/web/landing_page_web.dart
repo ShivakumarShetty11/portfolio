@@ -27,7 +27,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           size: 25.0,
           color: Colors.black,
         ),
-        title: TabsWebList(),
+        title: const TabsWebList(),
       ),
       body: ListView(
         children: [
