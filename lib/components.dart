@@ -553,7 +553,6 @@ class _ContactFormWebState extends State<ContactFormWeb> {
           const SizedBox(height: 20.0),
           MaterialButton(
             onPressed: () async {
-              logger.d(_firstNameController.text);
               final addData = AddDataFirestore();
               if (formKey.currentState!.validate()) {
                 if (await addData.addResponse(
