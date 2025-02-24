@@ -216,11 +216,11 @@ class DrawersMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               urlLauncher("assets/instagram.svg",
-                  "https://www.instagram.com/tomcruise/"),
+                  "https://www.instagram.com/Shettyshiva11"),
               urlLauncher(
                   "assets/twitter.svg", "https://www.twitter.com/tomcruise"),
-              urlLauncher("assets/github.svg",
-                  "https://github.com/sagnik150699/paulina_knop"),
+              urlLauncher(
+                  "assets/github.svg", "https://github.com/ShivakumarShetty11"),
             ],
           ),
         ],
